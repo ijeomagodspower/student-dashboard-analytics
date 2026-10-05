@@ -12,7 +12,6 @@ export const EditProvider: React.FC<{ children: React.ReactNode }> = ({
   const [editStudentData, setEditStudentData] = useState<
     estudentData | undefined
   >();
-  const [allStudentData, setAllStudentData] = useState<estudentData[]>([]);
 
   const getStudentDetails = async (sId: number) => {
     // Implement the logic to upload student details here
@@ -24,8 +23,7 @@ export const EditProvider: React.FC<{ children: React.ReactNode }> = ({
       }
 
       const data = await response.json();
-      setAllStudentData(data);
-      console.log("student Data", allStudentData);
+
       setEditStudentData(
         data.find((student: estudentData) => student.id === sId),
       );

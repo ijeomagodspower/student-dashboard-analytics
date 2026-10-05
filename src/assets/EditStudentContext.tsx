@@ -25,10 +25,6 @@ interface editContextType {
   setEditStudentData: React.Dispatch<
     React.SetStateAction<estudentData | undefined>
   >;
-  allStudentData: estudentData[];
-  setAllStudentData: React.Dispatch<
-    React.SetStateAction<estudentData[] | undefined>
-  >;
 }
 
 export const EditStudentContext = createContext<editContextType | undefined>(

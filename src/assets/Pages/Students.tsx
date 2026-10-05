@@ -22,6 +22,7 @@ interface studentData {
 const Students = () => {
   const { username } = useParams();
   const { setSideBar } = useSideBarContext();
+  const navigate = useNavigate();
 
   console.log(username);
 
@@ -59,11 +60,13 @@ const Students = () => {
     ? studentData.find((std) => std.username === username)
     : undefined;
 
-  const stdId = student?.id;
+  if (!student) {
+    return;
+  }
+
+  const stdId = student.id;
 
   console.log("student obj", stdId);
-
-  const navigate = useNavigate();
 
   return (
     <div
@@ -99,7 +102,7 @@ const Students = () => {
 
           <div className="flex justify-between items-center">
             <EditBtn studentId={stdId} />
-            <DeleteBtn std={stdId} />
+            <DeleteBtn />
           </div>
         </div>
 
