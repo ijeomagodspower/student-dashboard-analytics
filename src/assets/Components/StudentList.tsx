@@ -22,14 +22,13 @@ const StudentList = () => {
     return (
       <Link to={`/students/${std.username}`} key={std.id}>
         <div className="flex justify-between text-md p-4 border-b-5 border-bg-light-highlight transition-all duration-200 hover:bg-slate-300 hover:scale-101 rounded-3xl">
-          <div className="flex basis-1/12">{`0${std.id}`}</div>
+          <div className="flex basis-2/12">{`0${std.id}`}</div>
           <div className="flex basis-3/12">{std.name}</div>
           <div className="flex basis-2/12">{std.class}</div>
           <div className="flex basis-2/12">{std.gender}</div>
           <div className="flex basis-3/12">
             {std.status ? <ActiveIcon /> : <InactiveIcon />}
           </div>
-          <div className="flex basis-1/12">•••</div>
         </div>
       </Link>
     );
@@ -39,14 +38,13 @@ const StudentList = () => {
     return (
       <Link to={`/students/${std.username}`} key={std.id}>
         <div className="flex justify-between text-md p-4 border-b-5 border-bg-light-highlight items-center font-semibold transition-all duration-200 hover:bg-slate-300 hover:scale-101 rounded-3xl">
-          <div className="flex basis-1/12">{`0${std.id}`}</div>
+          <div className="flex basis-2/12">{`0${std.id}`}</div>
           <div className="flex basis-3/12">{std.name}</div>
           <div className="flex basis-2/12">{std.class}</div>
           <div className="flex basis-2/12">{std.gender}</div>
           <div className="flex basis-3/12">
             {std.status ? <ActiveIcon /> : <InactiveIcon />}
           </div>
-          <div className="flex basis-1/12">•••</div>
         </div>
       </Link>
     );
@@ -88,12 +86,11 @@ const StudentList = () => {
       </div>
 
       <div className="flex justify-between bg-bg-light-highlight text-md font-bold p-4 mb-10 rounded-2xl">
-        <div className="flex basis-1/12">ID</div>
+        <div className="flex basis-2/12">Student ID</div>
         <div className="flex basis-3/12">Name</div>
         <div className="flex basis-2/12">Class</div>
         <div className="flex basis-2/12">Gender</div>
         <div className="flex basis-3/12">Status</div>
-        <div className="flex basis-1/12">Action</div>
       </div>
 
       {/* Students Name */}
