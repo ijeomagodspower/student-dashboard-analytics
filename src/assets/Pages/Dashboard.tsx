@@ -140,12 +140,12 @@ function Dashboard() {
     */
 
     <div
-      className="flex-col min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none px-4 sm:px-6"
+      className="flex-col min-w-11/12 sm:min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none px-4 sm:px-6"
       onClick={() => setSideBar(false)}
     >
       {/* STATUS CARD SECTION */}
 
-      <section className="flex mb-10 justify-between flex-col gap-5 sm:flex-col md:flex-row md:gap-0">
+      <section className="flex mb-15 justify-between flex-col gap-5 sm:flex-col md:flex-row md:gap-0">
         <div className="flex-col space-y-4">
           <h1 className="text-3xl font-bold text-black">
             Good Day, Overviewer
