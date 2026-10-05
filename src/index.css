@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-bg: #3631ad;
+  --color-secondary-bg: #ffffff;
+  --color-bg-light-highlight: #eff2f9;
+  --color-bg-highlight: #6a64fc;
+  --color-primary-highlight: #bebcff;
+  --color-bg-accent: #5ecc9b;
+  --animate-load-in: load-in 1s ease-in-out @keyframes load-in {from
+    {width: 0px;} to {width: 30px}};
+}

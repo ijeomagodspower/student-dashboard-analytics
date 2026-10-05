@@ -1,0 +1,12 @@
+.animate-growbar {
+  animation: load-in 1s ease-in-out;
+}
+
+@keyframes load-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--bar-width);
+  }
+}
