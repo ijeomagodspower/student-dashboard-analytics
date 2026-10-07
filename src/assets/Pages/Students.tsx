@@ -61,7 +61,7 @@ const Students = () => {
     : undefined;
 
   if (!student) {
-    console.log("return");
+    throw new Error("no Student Found");
   }
 
   const stdId = student?.id;
