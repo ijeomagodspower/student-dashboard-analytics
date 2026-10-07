@@ -13,9 +13,9 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="flex fixed top-0 left-0 min-w-full  z-100">
+      <nav className="flex fixed top-0 sm:left-0 min-w-full z-100">
         <div className="flex justify-between min-w-full h-20 items-center align-middle p-4 bg-primary-bg text-white ">
-          <header className="flex justify-center min-w-full items-center p-4 text-white">
+          <header className="flex justify-center min-w-full gap-4 items-center p-4 text-white">
             <div className="flex justify-between min-w-full items-center  ">
               <a href="/">
                 <div className="flex text-3xl font-bold gap-5">
