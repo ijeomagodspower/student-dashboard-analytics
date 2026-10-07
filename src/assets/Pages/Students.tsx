@@ -61,7 +61,41 @@ const Students = () => {
     : undefined;
 
   if (!student) {
-    throw new Error("no Student Found");
+    return (
+      <div
+        className="flex-con min-w-full px-6 text-gray-700 my-40 sm:px-30"
+        onClick={() => setSideBar(false)}
+      >
+        <button
+          className="flex justify-self-start p-2 absolute left-5 sm:left-10 top-25 rounded-full border-2 border-primary-bg transition duration-200 ease-in hover:scale-110"
+          onClick={() => navigate(-1)}
+        >
+          <ChevronLeft className="text-primary-bg" />
+        </button>
+        <section
+          className="flex flex-col space-y-10 w-full justify-between sm:flex-row"
+          id="student-info "
+        >
+          {/*Add Student*/}
+          <Link to="/addstudent" className="flex-col min-w-4/12 ">
+            <div
+              className={`flex-col w-full p-6 space-y-6 rounded-2xl border-3 overflow-hidden justify-items-center border-bg-accent group`}
+            >
+              <div className="w-4/12 justify-items-center p-8 rounded-full bg-bg-light-highlight group-hover:bg-primary-highlight group-hover:scale-105 transition duration-200 ease-in">
+                <Plus className="w-10 h-10 text-primary-bg" />
+              </div>
+              <div>
+                <h3 className="text-primary-bg">Add a Student</h3>
+              </div>
+            </div>
+          </Link>
+        </section>
+
+        <section className="Student-List flex min-w-full my-20">
+          <StudentList />
+        </section>
+      </div>
+    );
   }
 
   const stdId = student?.id;
