@@ -52,7 +52,7 @@ function Dashboard() {
 
   return (
     <div
-      className="flex-col min-w-full sm:min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none px-10 sm:px-6"
+      className="flex-col min-w-full sm:min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none"
       onClick={() => setSideBar(false)}
     >
       {/* STATUS CARD SECTION */}
@@ -77,7 +77,7 @@ function Dashboard() {
         </Link>
       </section>
 
-      <section className="flex min-w-full justify-between flex-col gap-4 sm:grid sm:grid-cols-2 md:flex md:flex-row md:gap-0">
+      <section className="flex justify-between flex-col gap-4 sm:grid sm:grid-cols-2 md:flex md:flex-row md:gap-0">
         <div className="flex bg-slate-100 rounded-2xl shadow-2xl p-4 gap-2 border border-slate-200">
           <div className="flex-col content-center">
             <span className="flex rounded-full bg-primary-highlight p-2">
@@ -133,12 +133,12 @@ function Dashboard() {
 
       {/* CHART SECTION */}
 
-      <section className="Chart-section flex flex-col space-x-4 min-w-full justify-between md:flex-row">
+      <section className="Chart-section flex flex-col space-x-4 justify-between md:flex-row">
         <LinearClassChart />
         <GenderOverview />
       </section>
 
-      <section className="Student-List flex min-w-full my-20 overflow-x-auto shadow-2xl">
+      <section className="Student-List flex  my-20 overflow-x-auto shadow-2xl">
         <StudentList />
       </section>
     </div>
