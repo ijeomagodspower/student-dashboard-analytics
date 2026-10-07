@@ -4,29 +4,29 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { useSideBarContext } from "../sidebarContext";
 
 const open =
-  "position: fixed left-0 top-0 w-1/5 h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
+  "position: fixed left-0 top-0 min-w-full sm:min-w-1/5 h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
 const close =
-  "position: fixed left-0 top-0 w-1/5 h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-100 z-50";
+  "position: fixed left-0 top-0 min-w-full sm:min-w-1/5 h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
 
 const Nav = () => {
   const { sidebar, setSideBar } = useSideBarContext();
 
   return (
     <>
-      <nav className="flex fixed top-0 left-0 min-w-full z-100">
+      <nav className="flex fixed top-0 left-0 min-w-full  z-100">
         <div className="flex justify-between min-w-full h-20 items-center align-middle p-4 bg-primary-bg text-white ">
           <header className="flex justify-center min-w-full items-center p-4 text-white">
-            <div className="flex justify-between min-w-11/12 items-center ">
+            <div className="flex justify-between min-w-full items-center  ">
               <a href="/">
-                <div className="flex items-center text-3xl font-bold gap-5">
-                  <FaGraduationCap className="text-white w-10 h-10" /> Students
+                <div className="flex text-3xl font-bold gap-5">
+                  <FaGraduationCap className="text-white w-10 h-10 " /> Students
                   Overview
                 </div>
               </a>
               <div>
                 <MenuIcon
                   onClick={() => setSideBar(!sidebar)}
-                  className="text-white cursor-pointer w-6 h-6 transition-all duration-200 ease-out hover:scale-120"
+                  className="text-white cursor-pointer mt-1 stroke-3 w-6 h-6 transition-all duration-200 ease-out hover:scale-120"
                 />
               </div>
             </div>

@@ -61,29 +61,32 @@ const Students = () => {
     : undefined;
 
   if (!student) {
-    return;
+    console.log("return");
   }
 
-  const stdId = student.id;
+  const stdId = student?.id;
 
   console.log("student obj", stdId);
 
   return (
     <div
-      className="flex-con text-gray-700 my-40 px-30"
+      className="flex-con min-w-full px-6 text-gray-700 my-40 sm:px-30"
       onClick={() => setSideBar(false)}
     >
       <button
-        className="flex justify-self-start p-2 absolute left-10 top-25 rounded-full border-2 border-primary-bg transition duration-200 ease-in hover:scale-110"
+        className="flex justify-self-start p-2 absolute left-5 sm:left-10 top-25 rounded-full border-2 border-primary-bg transition duration-200 ease-in hover:scale-110"
         onClick={() => navigate(-1)}
       >
         <ChevronLeft className="text-primary-bg" />
       </button>
-      <section className="flex w-full justify-between" id="student-info">
+      <section
+        className="flex flex-col space-y-10 w-full justify-between sm:flex-row"
+        id="student-info "
+      >
         <div
-          className={`flex-col w-4/12 p-6 space-y-6 rounded-2xl border-2 ${student?.gender === "Male" ? "border-primary-bg" : "border-bg-accent"} ${!student && "hidden"}`}
+          className={`flex-col min-w-4/12 p-6 space-y-6 rounded-2xl border-3 overflow-hidden ${student?.gender === "Male" ? "border-primary-bg" : "border-bg-accent"} ${!student && "hidden"}`}
         >
-          <div className=" w-full flex justify-between items-start">
+          <div className=" flex justify-between items-start">
             <div className="flex-col">
               <p>{student?.username}</p>
               <h3 className="text-bold text-2xl text-black">{student?.name}</h3>
@@ -107,9 +110,9 @@ const Students = () => {
         </div>
 
         {/*Add Student*/}
-        <Link to="/addstudent" className="flex-col w-4/12">
+        <Link to="/addstudent" className="flex-col min-w-4/12 ">
           <div
-            className={`flex-col w-full p-6 space-y-6 rounded-2xl border-2 justify-items-center ${student?.gender === "Male" ? "border-primary-bg" : "border-bg-accent"} group`}
+            className={`flex-col w-full p-6 space-y-6 rounded-2xl border-3 overflow-hidden justify-items-center ${student?.gender === "Male" ? "border-primary-bg" : "border-bg-accent"} group`}
           >
             <div className="w-4/12 justify-items-center p-8 rounded-full bg-bg-light-highlight group-hover:bg-primary-highlight group-hover:scale-105 transition duration-200 ease-in">
               <Plus className="w-10 h-10 text-primary-bg" />

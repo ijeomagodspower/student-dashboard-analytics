@@ -51,14 +51,14 @@ const StudentList = () => {
   });
 
   return (
-    <section className="flex-col min-w-full bg-white space-y-4 p-6 rounded-2xl shadow-2xl">
-      <div className="flex w-full justify-between mb-10 gap-10">
-        <div className="flex gap-5 w-4/12 items-center">
+    <section className="flex-col min-w-full bg-bg-light-highlight space-y-4 p-6 rounded-2xl shadow-2xl">
+      <div className="flex flex-wrap sm:flex-nowrap sm:w-full justify-between mb-10 gap-10">
+        <div className="flex sm:min-w-2/8 gap-5 items-center">
           <UserRound className="text-primary-bg" />
           <h2 className="text-lg font-bold text-black">Recent Students</h2>
         </div>
         <section
-          className="flex w-full justify-between items-center gap-4 w-6/12"
+          className="flex basis-full order-4 justify-between items-center gap-4 sm:min-w-4/8 sm:order-0 "
           id="search bar"
         >
           <input
@@ -71,7 +71,7 @@ const StudentList = () => {
             className="w-full border-2 border-bg-accent rounded-3xl p-3 outline-none focus:border-primary-bg"
           ></input>
         </section>
-        <div className="flex gap-6 items-center w-4/12">
+        <div className="flex gap-6 items-center sm:min-w-2/8">
           <button
             className={`flex items-center bg-green-100 rounded-full p-2 transition-all duration-300 ease-in-out hover:scale-110 hover:bg-green-300 ${showAll ? "-rotate-180" : ""}`}
             onClick={() => setShowAll(!showAll)}
@@ -85,7 +85,7 @@ const StudentList = () => {
         </div>
       </div>
 
-      <div className="flex justify-between bg-bg-light-highlight text-md font-bold p-4 mb-10 rounded-2xl">
+      <div className="flex min-w-full gap-3 justify-between bg-bg-light-highlight text-md font-bold p-4 mb-10 rounded-2xl">
         <div className="flex basis-2/12">Student ID</div>
         <div className="flex basis-3/12">Name</div>
         <div className="flex basis-2/12">Class</div>

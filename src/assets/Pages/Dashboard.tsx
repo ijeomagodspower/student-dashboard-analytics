@@ -145,7 +145,7 @@ function Dashboard() {
     >
       {/* STATUS CARD SECTION */}
 
-      <section className="flex mb-15 justify-between flex-col gap-5 sm:flex-col md:flex-row md:gap-0">
+      <section className="flex mb-15 justify-between flex-col gap-5 sm:flex-col md:flex-row md:gap-2">
         <div className="flex-col space-y-4">
           <h1 className="text-3xl font-bold text-black">
             Good Day, Overviewer
@@ -221,12 +221,12 @@ function Dashboard() {
 
       {/* CHART SECTION */}
 
-      <section className="Chart-section flex min-w-full gap-6 justify-between flex-col md:flex-row">
+      <section className="Chart-section flex flex-col space-x-4 min-w-full justify-between md:flex-row">
         <LinearClassChart />
         <GenderOverview />
       </section>
 
-      <section className="Student-List flex min-w-full my-20 overflow-x-auto">
+      <section className="Student-List flex min-w-full my-20 overflow-x-auto shadow-2xl">
         <StudentList />
       </section>
     </div>

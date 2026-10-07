@@ -22,15 +22,15 @@ const LinearClassChart = () => {
 
   console.log(`percent${jss1Percentage}`);
   return (
-    <div className="flex-col w-3/5 p-5 space-y-6 shadow-2xl rounded-2xl">
+    <div className="flex-col basis-full sm:basis-3/5 p-5 space-y-6 shadow-2xl rounded-2xl">
       {/* JSS 1 */}
       <div className="flex gap-5 items-start">
-        <SquareUser className="text-primary-bg" />
+        <SquareUser className="text-primary-bg w-6 h-6" />
         <h2 className="text-lg font-bold text-black">Students by Class</h2>
       </div>
 
-      <div className="w-full flex space-x-6 justify-between items-center">
-        <h4 className="basis-10 font-semibold">Jss 1</h4>
+      <div className="min-w-full flex space-x-6 justify-between items-center">
+        <h4 className="basis-12 font-semibold">Jss 1</h4>
         <div className="flex h-3 w-full overflow-hidden border-none bg-slate-200 rounded-3xl">
           <div
             className="bg-linear-to-r from-primary-bg to-green-400 rounded-3xl"
@@ -43,7 +43,7 @@ const LinearClassChart = () => {
       {/* JSS 2 */}
 
       <div className="w-full flex space-x-6 justify-between items-center">
-        <h4 className="basis-10 font-semibold">Jss 2</h4>
+        <h4 className="basis-12 font-semibold">Jss 2</h4>
         <div className="flex h-3 w-full overflow-hidden border-none bg-slate-200 rounded-3xl">
           <div
             className="bg-linear-to-r from-primary-bg to-green-400 rounded-3xl "
@@ -56,7 +56,7 @@ const LinearClassChart = () => {
       {/* JSS 3 */}
 
       <div className="w-full flex space-x-6 justify-between items-center">
-        <h4 className="basis-10 font-semibold">Jss 3</h4>
+        <h4 className="basis-12 font-semibold">Jss 3</h4>
         <div className="flex h-3 w-full overflow-hidden border-none bg-slate-200 rounded-3xl">
           <div
             className="bg-linear-to-r from-primary-bg to-green-400 rounded-3xl "
@@ -68,7 +68,7 @@ const LinearClassChart = () => {
 
       {/* SS 1 */}
       <div className="w-full flex space-x-6 justify-between items-center">
-        <h4 className="basis-10 font-semibold">SS 1</h4>
+        <h4 className="basis-12 font-semibold">SS 1</h4>
         <div className="flex h-3 w-full overflow-hidden border-none bg-slate-200 rounded-3xl">
           <div
             className="bg-linear-to-r from-primary-bg to-green-400 rounded-3xl "
@@ -80,7 +80,7 @@ const LinearClassChart = () => {
 
       {/* SS 2 */}
       <div className="w-full flex space-x-6 justify-between items-center">
-        <h4 className="basis-10 font-semibold">SS 2</h4>
+        <h4 className="basis-12 font-semibold">SS 2</h4>
         <div className="flex h-3 w-full overflow-hidden border-none bg-slate-200 rounded-3xl">
           <div
             className="bg-linear-to-r from-primary-bg to-green-400 rounded-3xl "
@@ -93,7 +93,7 @@ const LinearClassChart = () => {
       {/* SS 3 */}
 
       <div className="w-full flex space-x-6 justify-between items-center">
-        <h4 className="basis-10 font-semibold">SS 3</h4>
+        <h4 className="basis-12 font-semibold">SS 3</h4>
         <div className="flex h-3 w-full overflow-hidden border-none bg-slate-200 rounded-3xl">
           <div
             className="bg-linear-to-r from-primary-bg to-green-400 rounded-3xl"

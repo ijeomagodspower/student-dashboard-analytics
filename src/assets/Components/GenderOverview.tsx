@@ -15,7 +15,7 @@ function GenderOverview() {
   console.log(female);
 
   return (
-    <div className="rounded-2xl w-2/5 p-6 shadow-2xl">
+    <div className=" basis-full sm:basis-2/5 p-6 rounded-2xl overflow-hidden shadow-2xl">
       {/* Header */}
       <div className="mb-6 flex items-center gap-3">
         <svg
@@ -32,7 +32,7 @@ function GenderOverview() {
         <h2 className="text-lg font-bold text-slate-900">Gender Overview</h2>
       </div>
 
-      <div className="flex items-center justify-between gap-8">
+      <div className="flex flex-col sm:flex-row min-w-full items-center justify-between gap-8">
         {/* DONUT */}
         <div className="relative h-44 w-44">
           <svg viewBox="0 0 180 180" className="h-full w-full -rotate-90">
