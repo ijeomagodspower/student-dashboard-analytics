@@ -52,38 +52,45 @@ function Dashboard() {
 
   return (
     <div
-      className="flex-col min-w-full sm:min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none"
+      className="w-full max-w-[1400px] mx-auto my-10 sm:my-16 lg:my-20 px-4 sm:px-6 lg:px-8 space-y-8 select-none"
       onClick={() => setSideBar(false)}
     >
       {/* STATUS CARD SECTION */}
 
-      <section className="flex mb-15 justify-between flex-col gap-5 sm:flex-col md:flex-row md:gap-2">
-        <div className="flex-col space-y-4">
-          <h1 className="text-3xl font-bold text-black">
+      <section className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+        <div className="space-y-2">
+          <h1 className="text-2xl sm:text-3xl font-bold text-black">
             Good Day, Overviewer
           </h1>
-          <p>Here's the stats of students today.</p>
+
+          <p className="text-sm sm:text-base">
+            Here's the stats of students today.
+          </p>
         </div>
 
-        <Link to="/addstudent">
-          <div className="flex text-xl font-bold text-primary-bg gap-2 p-4 items-center border-2 rounded-2xl hover:scale-105 transition duration-200 ease-in group w-fit">
-            <div className="text transition duration-200 group-hover:scale-105">
+        <Link to="/addstudent" className="w-fit">
+          <div className="flex w-fit text-base sm:text-xl font-bold text-primary-bg gap-2 p-3 sm:p-4 items-center border-2 rounded-2xl hover:scale-105 transition duration-200 ease-in group">
+            <div className="transition duration-200 group-hover:scale-105">
               Add Student
             </div>
-            <div className=" transition duration-200 group-hover:scale-120">
+
+            <div className="transition duration-200 group-hover:scale-120">
               <Plus className="text-primary-bg" />
             </div>
           </div>
         </Link>
       </section>
 
-      <section className="flex justify-between flex-col gap-4 sm:grid sm:grid-cols-2 md:flex md:flex-row md:gap-0">
-        <div className="flex bg-slate-100 rounded-2xl shadow-2xl p-4 gap-2 border border-slate-200">
-          <div className="flex-col content-center">
+      {/* STATUS CARDS */}
+
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="flex min-w-0 bg-slate-100 rounded-2xl shadow-2xl p-4 gap-3 border border-slate-200">
+          <div className="flex shrink-0 items-center">
             <span className="flex rounded-full bg-primary-highlight p-2">
               <UserGroup className="text-primary-bg" />
             </span>
           </div>
+
           <AnalyticalCard
             title={"Total Students"}
             figure={totalStudents.length}
@@ -91,12 +98,13 @@ function Dashboard() {
           />
         </div>
 
-        <div className="flex bg-green-100 rounded-2xl shadow-2xl p-4 gap-2 border border-green-200">
-          <div className="flex-col content-center">
+        <div className="flex min-w-0 bg-green-100 rounded-2xl shadow-2xl p-4 gap-3 border border-green-200">
+          <div className="flex shrink-0 items-center">
             <span className="flex rounded-full bg-bg-accent p-2">
               <UserRoundCheck className="text-secondary-bg" />
             </span>
           </div>
+
           <AnalyticalCard
             title={"Active Students"}
             figure={totalStudents.filter((std) => std.status === true).length}
@@ -104,12 +112,13 @@ function Dashboard() {
           />
         </div>
 
-        <div className="flex bg-red-100 rounded-2xl shadow-2xl p-4 gap-2 border border-red-200">
-          <div className="flex-col content-center">
+        <div className="flex min-w-0 bg-red-100 rounded-2xl shadow-2xl p-4 gap-3 border border-red-200">
+          <div className="flex shrink-0 items-center">
             <span className="flex rounded-full bg-red-500 p-2">
               <UserRoundX className="text-secondary-bg" />
             </span>
           </div>
+
           <AnalyticalCard
             title={"Inactive Students"}
             figure={totalStudents.filter((std) => std.status === false).length}
@@ -117,12 +126,13 @@ function Dashboard() {
           />
         </div>
 
-        <div className="flex bg-blue-100 rounded-2xl shadow-2xl p-4 gap-2 border border-blue-200">
-          <div className="flex-col content-center">
+        <div className="flex min-w-0 bg-blue-100 rounded-2xl shadow-2xl p-4 gap-3 border border-blue-200">
+          <div className="flex shrink-0 items-center">
             <span className="flex rounded-full bg-blue-300 p-2">
               <GraduationCap className="text-blue-600" />
             </span>
           </div>
+
           <AnalyticalCard
             title={"Total Classes"}
             figure={new Set(totalStudents.map((std) => std.class)).size}
@@ -133,13 +143,22 @@ function Dashboard() {
 
       {/* CHART SECTION */}
 
-      <section className="Chart-section flex flex-col space-x-4 justify-between md:flex-row">
-        <LinearClassChart />
-        <GenderOverview />
+      <section className="Chart-section grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="min-w-0 w-full">
+          <LinearClassChart />
+        </div>
+
+        <div className="min-w-0 w-full">
+          <GenderOverview />
+        </div>
       </section>
 
-      <section className="Student-List flex  my-20 overflow-x-auto shadow-2xl">
-        <StudentList />
+      {/* STUDENT LIST */}
+
+      <section className="Student-List w-full my-10 sm:my-16 overflow-x-auto shadow-2xl rounded-2xl">
+        <div className="min-w-full">
+          <StudentList />
+        </div>
       </section>
     </div>
   );
