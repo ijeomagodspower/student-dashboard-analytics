@@ -140,7 +140,7 @@ function Dashboard() {
     */
 
     <div
-      className="flex-col min-w-11/12 sm:min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none px-4 sm:px-6"
+      className="flex-col min-w-full sm:min-w-10/12 justify-center justify-self-center align-center my-30 space-y-5 select-none pl-4 sm:px-6"
       onClick={() => setSideBar(false)}
     >
       {/* STATUS CARD SECTION */}
