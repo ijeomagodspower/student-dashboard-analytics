@@ -38,31 +38,23 @@ const Nav = () => {
         className={`Dashboard-sidebar ${sidebar ? open : close} overflow-hidden mt-20 z-100`}
       >
         <div className="flex-col my-5 px-10 text-md font-bold space-y-6 text-white ">
+          className=" bg-bg-highlight p-3 rounded-3xl transition-all
+          duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           <Link to="/">
-            <div
-              className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
-              onClick={() => setSideBar(false)}
-            >
-              Dashboard
-            </div>
+            <div onClick={() => setSideBar(false)}>Dashboard</div>
           </Link>
-          <Link to="/students">
-            <div
-              className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
-              onClick={() => setSideBar(false)}
-            >
-              Students
-            </div>
+          <Link
+            to="/students"
+            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+          >
+            <div onClick={() => setSideBar(false)}>Students</div>
           </Link>
-
-          <Link to="/addstudent">
+          <Link
+            to="/addstudent"
+            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+          >
             {" "}
-            <div
-              className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
-              onClick={() => setSideBar(false)}
-            >
-              Add Students
-            </div>
+            <div onClick={() => setSideBar(false)}>Add Students</div>
           </Link>
         </div>
 

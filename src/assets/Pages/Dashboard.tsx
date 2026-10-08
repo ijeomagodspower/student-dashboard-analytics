@@ -52,7 +52,7 @@ function Dashboard() {
 
   return (
     <div
-      className="w-full max-w-[1400px]  mx-auto my-30 sm:my-16 lg:my-20 px-4 sm:px-6 lg:px-8 space-y-8 select-none"
+      className="w-full max-w-[1400px]  mx-auto my-30 sm:my-30 lg:my-20 px-4 sm:px-6 lg:px-8 space-y-8 select-none"
       onClick={() => setSideBar(false)}
     >
       {/* STATUS CARD SECTION */}
