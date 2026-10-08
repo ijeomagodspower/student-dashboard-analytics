@@ -4,9 +4,9 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { useSideBarContext } from "../sidebarContext";
 
 const open =
-  "position: fixed left-0 top-0 min-w-full h-4/6 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
+  "position: fixed left-0 top-0 min-w-full h-1/2 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
 const close =
-  "position: fixed left-0 top-0 min-w-full h-4/6 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
+  "position: fixed left-0 top-0 min-w-full h-1/2 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
 
 const Nav = () => {
   const { sidebar, setSideBar } = useSideBarContext();
@@ -35,13 +35,13 @@ const Nav = () => {
       </nav>
 
       <section
-        className={`Dashboard-sidebar ${sidebar ? open : close} overflow-hidden mt-20 z-100`}
+        className={`Dashboard-sidebar justify-items-center ${sidebar ? open : close} overflow-hidden mt-20 z-100`}
       >
-        <div className="flex-col my-5 px-10 text-md font-bold space-y-6 text-white ">
+        <div className="flex-col justify-items-center my-5 px-10 text-md font-bold space-y-6 text-white ">
           <Link
             to="/"
             className="flex bg-bg-highlight p-3 rounded-3xl transition-all
-          duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+          duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent "
           >
             <div className="w-full" onClick={() => setSideBar(false)}>
               Dashboard
@@ -50,7 +50,7 @@ const Nav = () => {
 
           <Link
             to="/students"
-            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent"
           >
             <div className="w-full" onClick={() => setSideBar(false)}>
               Students
@@ -58,7 +58,7 @@ const Nav = () => {
           </Link>
           <Link
             to="/addstudent"
-            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent"
           >
             <div className="w-full" onClick={() => setSideBar(false)}>
               Add Students
