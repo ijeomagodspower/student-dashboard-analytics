@@ -40,7 +40,7 @@ const Nav = () => {
         <div className="flex-col my-5 px-10 text-md font-bold space-y-6 text-white ">
           <Link
             to="/"
-            className=" bg-bg-highlight p-3 rounded-3xl transition-all
+            className="flex bg-bg-highlight p-3 rounded-3xl transition-all
           duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           >
             <div onClick={() => setSideBar(false)}>Dashboard</div>
@@ -48,13 +48,13 @@ const Nav = () => {
 
           <Link
             to="/students"
-            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           >
             <div onClick={() => setSideBar(false)}>Students</div>
           </Link>
           <Link
             to="/addstudent"
-            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           >
             <div onClick={() => setSideBar(false)}>Add Students</div>
           </Link>
