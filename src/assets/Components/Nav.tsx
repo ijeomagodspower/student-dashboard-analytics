@@ -18,8 +18,8 @@ const Nav = () => {
           <header className="flex justify-center min-w-full gap-4 items-center p-4 text-white">
             <div className="flex justify-between min-w-full items-center  ">
               <a href="/">
-                <div className="flex text-3xl font-bold gap-5">
-                  <FaGraduationCap className="text-white w-10 h-10 " /> Students
+                <div className="flex text-2xl sm:text-3xl font-bold gap-5">
+                  <FaGraduationCap className="text-white w-10 h-10 " />
                   Overview
                 </div>
               </a>
