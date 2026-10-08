@@ -18,37 +18,46 @@ const StudentList = () => {
       std.class.toLowerCase().includes(searchInput.toLowerCase()),
   );
 
-  const displayAll = filter.map((std) => {
-    return (
-      <Link to={`/students/${std.username}`} key={std.id}>
-        <div className="flex justify-between text-md p-4 border-b-5 border-bg-light-highlight transition-all duration-200 hover:bg-slate-300 hover:scale-101 rounded-3xl">
-          <div className="flex basis-2/12">{`0${std.id}`}</div>
-          <div className="flex basis-3/12">{std.name}</div>
-          <div className="flex basis-2/12">{std.class}</div>
-          <div className="flex basis-2/12">{std.gender}</div>
-          <div className="flex basis-3/12">
-            {std.status ? <ActiveIcon /> : <InactiveIcon />}
+  const displayAll = filter.length ? (
+    filter.map((std) => {
+      return (
+        <Link to={`/students/${std.username}`} key={std.id}>
+          <div className="flex justify-between text-md p-4 border-b-5 border-bg-light-highlight transition-all duration-200 hover:bg-slate-300 hover:scale-101 rounded-3xl">
+            <div className="flex basis-2/12">{`0${std.id}`}</div>
+            <div className="flex basis-3/12">{std.name}</div>
+            <div className="flex basis-2/12">{std.class}</div>
+            <div className="flex basis-2/12">{std.gender}</div>
+            <div className="flex basis-3/12">
+              {std.status ? <ActiveIcon /> : <InactiveIcon />}
+            </div>
           </div>
-        </div>
-      </Link>
-    );
-  });
+        </Link>
+      );
+    })
+  ) : (
+    <p className="flex"> No Result found </p>
+  );
 
-  const showLess = filter.slice(0, 5).map((std) => {
-    return (
-      <Link to={`/students/${std.username}`} key={std.id}>
-        <div className="flex justify-between text-md p-4 border-b-5 border-bg-light-highlight items-center font-semibold transition-all duration-200 hover:bg-slate-300 hover:scale-101 rounded-3xl">
-          <div className="flex basis-2/12">{`0${std.id}`}</div>
-          <div className="flex basis-3/12">{std.name}</div>
-          <div className="flex basis-2/12">{std.class}</div>
-          <div className="flex basis-2/12">{std.gender}</div>
-          <div className="flex basis-3/12">
-            {std.status ? <ActiveIcon /> : <InactiveIcon />}
-          </div>
-        </div>
-      </Link>
+  const showLess =
+    filter.length > 0 ? (
+      filter.slice(0, 5).map((std) => {
+        return (
+          <Link to={`/students/${std.username}`} key={std.id}>
+            <div className="flex justify-between text-md p-4 border-b-5 border-bg-light-highlight items-center font-semibold transition-all duration-200 hover:bg-slate-300 hover:scale-101 rounded-3xl">
+              <div className="flex basis-2/12">{`0${std.id}`}</div>
+              <div className="flex basis-3/12">{std.name}</div>
+              <div className="flex basis-2/12">{std.class}</div>
+              <div className="flex basis-2/12">{std.gender}</div>
+              <div className="flex basis-3/12">
+                {std.status ? <ActiveIcon /> : <InactiveIcon />}
+              </div>
+            </div>
+          </Link>
+        );
+      })
+    ) : (
+      <p className="flex"> No Result found </p>
     );
-  });
 
   return (
     <section className="flex-col min-w-full bg-bg-light-highlight space-y-4 p-6 rounded-2xl shadow-2xl">

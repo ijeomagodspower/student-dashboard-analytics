@@ -4,16 +4,16 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { useSideBarContext } from "../sidebarContext";
 
 const open =
-  "position: fixed left-0 top-0 min-w-full sm:min-w-1/5 h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
+  "position: fixed left-0 top-0 min-w-full h-4/6 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
 const close =
-  "position: fixed left-0 top-0 min-w-full sm:min-w-1/5 h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
+  "position: fixed left-0 top-0 min-w-full h-4/6 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
 
 const Nav = () => {
   const { sidebar, setSideBar } = useSideBarContext();
 
   return (
     <>
-      <nav className="flex fixed top-0 sm:left-0 min-w-full z-100">
+      <nav className="flex fixed top-0 sm:left-0 min-w-full z-100 ">
         <div className="flex justify-between min-w-full h-20 items-center align-middle p-4 bg-primary-bg text-white ">
           <header className="flex justify-center min-w-full gap-4 items-center p-4 text-white">
             <div className="flex justify-between min-w-full items-center  ">
@@ -43,20 +43,26 @@ const Nav = () => {
             className="flex bg-bg-highlight p-3 rounded-3xl transition-all
           duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           >
-            <div onClick={() => setSideBar(false)}>Dashboard</div>
+            <div className="w-full" onClick={() => setSideBar(false)}>
+              Dashboard
+            </div>
           </Link>
 
           <Link
             to="/students"
             className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           >
-            <div onClick={() => setSideBar(false)}>Students</div>
+            <div className="w-full" onClick={() => setSideBar(false)}>
+              Students
+            </div>
           </Link>
           <Link
             to="/addstudent"
             className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
           >
-            <div onClick={() => setSideBar(false)}>Add Students</div>
+            <div className="w-full" onClick={() => setSideBar(false)}>
+              Add Students
+            </div>
           </Link>
         </div>
 
