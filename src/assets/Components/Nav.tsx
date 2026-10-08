@@ -40,7 +40,7 @@ const Nav = () => {
         <div className="flex-col justify-items-center my-5 px-10 text-md font-bold space-y-6 text-white ">
           <Link
             to="/"
-            className="flex bg-bg-highlight p-3 rounded-3xl transition-all
+            className="flex min-w-full bg-bg-highlight p-3 rounded-3xl transition-all
           duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent "
           >
             <div className="w-full" onClick={() => setSideBar(false)}>
@@ -50,7 +50,7 @@ const Nav = () => {
 
           <Link
             to="/students"
-            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent"
+            className="flex min-w-full bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent"
           >
             <div className="w-full" onClick={() => setSideBar(false)}>
               Students
@@ -58,7 +58,7 @@ const Nav = () => {
           </Link>
           <Link
             to="/addstudent"
-            className="flex bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent"
+            className="flex min-w-full bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent active:text-bg-accent"
           >
             <div className="w-full" onClick={() => setSideBar(false)}>
               Add Students
