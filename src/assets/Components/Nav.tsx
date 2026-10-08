@@ -17,13 +17,13 @@ const Nav = () => {
         <div className="flex justify-between min-w-full h-20 items-center align-middle p-4 bg-primary-bg text-white ">
           <header className="flex justify-center min-w-full gap-4 items-center p-4 text-white">
             <div className="flex justify-between min-w-full items-center  ">
-              <a href="/">
-                <div className="flex text-2xl sm:text-3xl font-bold gap-5">
-                  <FaGraduationCap className="text-white w-10 h-10 " />
-                  Overview
+              <a href="/" className="basis-2/3 sm:basis-6/10">
+                <div className="flex text-2xl items-center content-center sm:text-3xl font-bold gap-5">
+                  <FaGraduationCap className="text-white w-8 h-8 " />
+                  <p className=" mt-2 text-start items-center">Overview</p>
                 </div>
               </a>
-              <div>
+              <div className="basis-1/3 sm:basis-4/10">
                 <MenuIcon
                   onClick={() => setSideBar(!sidebar)}
                   className="text-white cursor-pointer mt-1 stroke-3 w-6 h-6 transition-all duration-200 ease-out hover:scale-120"
