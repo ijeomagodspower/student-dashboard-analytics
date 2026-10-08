@@ -4,9 +4,9 @@ import { FaGraduationCap } from "react-icons/fa6";
 import { useSideBarContext } from "../sidebarContext";
 
 const open =
-  "position: fixed left-0 top-0 min-w-full h-1/2 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
+  "position: fixed left-0 top-0 min-w-full h-1/2 sm:min-w-1/5 px-10 sm:h-full bg-primary-bg shadow-2xl border-white duration-500 ease-in-out transform translate-x-0 z-50";
 const close =
-  "position: fixed left-0 top-0 min-w-full h-1/2 sm:min-w-1/5 sm:h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
+  "position: fixed left-0 top-0 min-w-full h-1/2 sm:min-w-1/5 px-10 sm:h-full bg-primary-bg shadow-2xl border-white transition duration-500 ease-in-out transform -translate-x-150 z-50";
 
 const Nav = () => {
   const { sidebar, setSideBar } = useSideBarContext();
@@ -16,14 +16,14 @@ const Nav = () => {
       <nav className="flex fixed top-0 sm:left-0 min-w-full z-100 ">
         <div className="flex justify-between min-w-full h-20 items-center align-middle p-4 bg-primary-bg text-white ">
           <header className="flex justify-center min-w-full gap-4 items-center p-4 text-white">
-            <div className="flex justify-between min-w-full items-center  ">
+            <div className="flex justify-between min-w-full items-center ">
               <a href="/" className="basis-2/3 sm:basis-6/10">
-                <div className="flex text-2xl items-center content-center sm:text-3xl font-bold gap-5">
+                <div className="flex text-2xl items-center content-center sm:text-3xl font-bold gap-4">
                   <FaGraduationCap className="text-white w-8 h-8 " />
-                  <p className=" mt-2 text-start items-center">Overview</p>
+                  <p className="text-start items-center">Overview</p>
                 </div>
               </a>
-              <div className="basis-1/3 sm:basis-4/10">
+              <div className="flex basis-1/3 sm:basis-4/10 justify-end">
                 <MenuIcon
                   onClick={() => setSideBar(!sidebar)}
                   className="text-white cursor-pointer mt-1 stroke-3 w-6 h-6 transition-all duration-200 ease-out hover:scale-120"
@@ -37,7 +37,7 @@ const Nav = () => {
       <section
         className={`Dashboard-sidebar justify-items-center ${sidebar ? open : close} overflow-hidden mt-20 z-100`}
       >
-        <div className="flex-col min-w-full justify-items-center my-5 px-10 text-md font-bold space-y-6 text-white ">
+        <div className="flex-col min-w-full justify-items-center my-5 text-md font-bold space-y-6 text-white ">
           <Link
             to="/"
             className="flex min-w-full bg-bg-highlight p-3 rounded-3xl transition-all
