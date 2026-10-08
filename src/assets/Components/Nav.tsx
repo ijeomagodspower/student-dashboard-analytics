@@ -37,7 +37,7 @@ const Nav = () => {
       <section
         className={`Dashboard-sidebar justify-items-center ${sidebar ? open : close} overflow-hidden mt-20 z-100`}
       >
-        <div className="flex-col min-w-full justify-items-center my-5 text-md font-bold space-y-6 text-white ">
+        <div className="flex-col min-w-10/12 justify-items-center my-5 text-md font-bold space-y-6 text-white ">
           <Link
             to="/"
             className="flex min-w-full bg-bg-highlight p-3 rounded-3xl transition-all
