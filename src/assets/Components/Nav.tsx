@@ -38,25 +38,34 @@ const Nav = () => {
         className={`Dashboard-sidebar ${sidebar ? open : close} overflow-hidden mt-20 z-100`}
       >
         <div className="flex-col my-5 px-10 text-md font-bold space-y-6 text-white ">
-          <div
-            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
-            onDoubleClick={() => setSideBar(false)}
-          >
-            <Link to="/">Dashboard</Link>
-          </div>
-          <div
-            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
-            onDoubleClick={() => setSideBar(false)}
-          >
-            <Link to="/students">Students</Link>
-          </div>
-          <div
-            className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
-            onDoubleClick={() => setSideBar(false)}
-          >
-            <Link to="/addstudent">Add Students</Link>
-          </div>
+          <Link to="/">
+            <div
+              className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+              onClick={() => setSideBar(false)}
+            >
+              Dashboard
+            </div>
+          </Link>
+          <Link to="/students">
+            <div
+              className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+              onClick={() => setSideBar(false)}
+            >
+              Students
+            </div>
+          </Link>
+
+          <Link to="/addstudent">
+            {" "}
+            <div
+              className=" bg-bg-highlight p-3 rounded-3xl transition-all duration-200 ease-out hover:scale-115 hover:text-bg-accent"
+              onClick={() => setSideBar(false)}
+            >
+              Add Students
+            </div>
+          </Link>
         </div>
+
         <div className="flex relative w-100 justify-center h-100 ">
           <div className="flex bg-bg-highlight absolute rounded-full -left-10 -bottom-20 w-80 h-80 z-10"></div>
           <div className="flex bg-bg-highlight absolute rounded-full opacity-70 -left-25 bottom-20 w-50 h-50"></div>
