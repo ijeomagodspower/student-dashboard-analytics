@@ -60,7 +60,7 @@ const StudentList = () => {
     );
 
   return (
-    <section className="flex-col min-w-full bg-bg-light-highlight space-y-4 p-6 rounded-2xl shadow-2xl">
+    <section className="flex-col min-w-full  bg-bg-light-highlight space-y-4 p-6 rounded-2xl shadow-2xl">
       <div className="flex flex-wrap sm:flex-nowrap sm:w-full justify-between mb-10 gap-10">
         <div className="flex sm:min-w-2/8 gap-5 items-center">
           <UserRound className="text-primary-bg" />
@@ -103,7 +103,9 @@ const StudentList = () => {
       </div>
 
       {/* Students Name */}
-      <div>{showAll ? displayAll : showLess}</div>
+      <div className="flex-col min-w-full overflow-x-auto">
+        {showAll ? displayAll : showLess}
+      </div>
     </section>
   );
 };

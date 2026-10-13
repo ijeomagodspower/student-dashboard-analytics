@@ -26,21 +26,6 @@ function Dashboard() {
   const { totalStudents, setTotalStudents } = useDashboardContext();
   /*Post and Get From Mock API Server*/
 
-  function addStudent() {
-    setTotalStudents((prevStudents) => [
-      ...prevStudents,
-      {
-        id: prevStudents.length + 1,
-        username: "student",
-        name: "New Student",
-        class: "JSS 1",
-        gender: "Male",
-        status: true,
-      },
-    ]);
-  }
-  console.log(addStudent);
-
   /*
     function activeStudents() {
       totalStudents.filter((std) => (std.status === true)).length

@@ -17,7 +17,7 @@ function GenderOverview() {
   return (
     <div className=" basis-full sm:basis-2/5 p-6 rounded-2xl overflow-hidden shadow-2xl">
       {/* Header */}
-      <div className="mb-6 flex items-center gap-3">
+      <div className="flex items-center gap-3 mb-6 sm:mb-20">
         <svg
           className="h-6 w-6 text-primary-bg"
           fill="none"
