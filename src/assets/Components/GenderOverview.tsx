@@ -32,7 +32,7 @@ function GenderOverview() {
         <h2 className="text-lg font-bold text-slate-900">Gender Overview</h2>
       </div>
 
-      <div className="flex flex-col sm:flex-row min-w-full items-center justify-between gap-8">
+      <div className="flex flex-col sm:flex-row min-w-full items-center justify-between gap-8 mb-20">
         {/* DONUT */}
         <div className="relative h-44 w-44">
           <svg viewBox="0 0 180 180" className="h-full w-full -rotate-90">
